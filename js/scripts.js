@@ -1,14 +1,16 @@
 // Business Logic
 function outputMessage(value) {
-  let newIndex;
   let messageList = [];
   for (let i = 0; i <= value; i++) {
     let numString = i.toString();
     if (numString.includes(3)) {
-      newIndex = "Won't you be my neighbor?";
+      let newIndex = "Won't you be my neighbor?";
       messageList.push(newIndex);
     } else if (numString.includes(2)) {
-      newIndex = "Boop";
+      let newIndex = "Boop!";
+      messageList.push(newIndex);
+    } else if (numString.includes(1)) {
+      let newIndex = "Beep!";
       messageList.push(newIndex);
     } else {
       messageList.push(i);

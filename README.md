@@ -22,6 +22,10 @@ Test: "If number contains a 3, change number to 'Won't you be my neighbor?'"
 Code: outputMessage(5)
 Expected Output: [0, 1, 2, "Won't you be my neighbor?", 4, 5]
 
-Test: "If number contains a 2, change number to 'Boop'"
+Test: "If number contains a 2, change number to 'Boop!'"
 Code: outputMessage(5);
-Expected Output: [0, 1, "Boop", "Won't you be my neighbor", 4, 5]
+Expected Output: [0, 1, "Boop!", "Won't you be my neighbor?", 4, 5]
+
+Test: "If number contains a 1, change number to 'Beep!'"
+Code: outputMessage(5);
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]
