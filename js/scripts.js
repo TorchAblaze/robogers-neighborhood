@@ -46,7 +46,7 @@ $(document).ready(function () {
   $("form#roboger").submit(function (event) {
     event.preventDefault();
     const userNum = userNumber($("#num-input").val());
-    const notNum = `Does Not compute! **[0_0]** My wires are cross... ${userNum} is not a number!`;
+    const notNum = `Does Not compute! **[0_o]** My wires are cross... ${userNum} is not a number!`;
     const isNum = outputMessage(userNum);
     if (isNaN(userNum)) {
       $("#output").text(notNum);

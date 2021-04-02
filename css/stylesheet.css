@@ -1,0 +1,19 @@
+.jumbotron {
+  color: white;
+  text-align: center;
+  margin: 5%;
+  background-color: lightgrey;
+}
+
+h1 {
+  padding: 5%;
+}
+
+body {
+  background-color: rgb(206 255 245 / 82%);
+}
+
+#output {
+  background-color: whitesmoke;
+  padding: 2%;
+}
