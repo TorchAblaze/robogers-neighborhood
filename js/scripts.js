@@ -30,7 +30,7 @@ function outputMessage(value) {
 // UI Logic
 function userNumber(userInput) {
   numberRange = parseInt(userInput);
-  if (Number.isNaN(numberRange)) {
+  if (isNaN(numberRange)) {
     return userInput;
   } else {
     if (numberRange < 0) {
@@ -41,8 +41,13 @@ function userNumber(userInput) {
 }
 
 $(document).ready(function () {
-  $("form#roboger").sumbit(function (event) {
+  $("form#roboger").submit(function (event) {
     event.preventDefault();
-    const userNum = $("#num-input").val();
+    const userNum = userNumber($("#num-input").val());
+    const notNum = `Does Not compute! **[0_0]** My wires are cross... ${userNum} is not a number!`;
+    const isNum = outputMessage(userNum);
+    if (isNaN(userNum)) {
+      $("#output").text(notNum);
+    }
   });
 });
