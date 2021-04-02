@@ -16,7 +16,15 @@ function outputMessage(value) {
       messageList.push(i);
     }
   }
-  return messageList;
+  let messageString = "";
+  messageList.forEach(function (value, index) {
+    if (index === messageList.length - 1) {
+      messageString += value;
+    } else {
+      messageString += `${value}, `;
+    }
+  });
+  return messageString;
 }
 
 // UI Logic
