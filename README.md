@@ -98,6 +98,9 @@ Code: outputMessage(24353446)
 Expected Output: "That number is too high!"
 
 Test: "Store the userName to personalize the message"
-Code:
-outputMessage(5, Mr. Roboger);
+Code: outputMessage(5, Mr. Roboger);
+Expected Output: "0, Beep! Boop! Won't you be my neighbor, Mr.Roboger? 4, 5"
+
+Test: "If name input is left blank, don't leave an empty space"
+Code: outputMessage(5, "");
 Expected Output: "0, Beep! Boop! Won't you be my neighbor, Mr.Roboger? 4, 5"

@@ -2,7 +2,13 @@
 function outputMessage(value, name) {
   let messageList = [];
   if (value > 1000000) {
+    if (!name) {
+      name = "Help";
+    }
     return `--[-_-]-- ${name}... You broke me, ${value} is too high! Shutting dooown...`;
+  }
+  if (!name) {
+    name = "please";
   }
   for (let i = 0; i <= value; i++) {
     let numString = i.toString();
@@ -36,11 +42,10 @@ function outputMessage(value, name) {
 function userNumber(userInput) {
   if (userInput === "") {
     userInput = "Nothing";
-    return userInput;
   }
   numberRange = parseInt(userInput);
   if (isNaN(numberRange)) {
-    return userInput;
+    return `Does Not compute! **[0_o]** My wires are cross... "${userInput}" is not a number!`;
   } else {
     if (numberRange < 0) {
       numberRange *= -1;
@@ -54,10 +59,9 @@ $(document).ready(function () {
     event.preventDefault();
     const userNum = userNumber($("#num-input").val());
     const userName = $("#user-name").val();
-    const notNum = `Does Not compute! **[0_o]** My wires are cross... "${userNum}" is not a number!`;
     const isNum = outputMessage(userNum, userName);
     if (isNaN(userNum)) {
-      $("#output").text(notNum);
+      $("#output").text(userNum);
     } else {
       $("#output").text(isNum);
     }
