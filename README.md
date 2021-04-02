@@ -92,3 +92,7 @@ Expected Output: "0, Beep!, Boop!, Won't you be my neighbor?, 4, 5"
 Test: "If a value in the list contains an ! or ?, don't inlcude a ,"
 Code: outputMessage(5)
 Expected Output: "0, Beep! Boop! Won't you be my neighbor? 4, 5"
+
+Test: "If the user submits a number larger than 1000000, return an error message"
+Code: outputMessage(24353446)
+Expected Output: "That number is too high!"

@@ -1,6 +1,9 @@
 // Business Logic
 function outputMessage(value) {
   let messageList = [];
+  if (value > 1000000) {
+    return `--[-_-]-- You broke me, ${value} is too high! Shutting dooown...`;
+  }
   for (let i = 0; i <= value; i++) {
     let numString = i.toString();
     if (numString.includes(3)) {

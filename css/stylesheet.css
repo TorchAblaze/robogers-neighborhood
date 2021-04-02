@@ -1,5 +1,6 @@
 .jumbotron {
   color: white;
+  font-family: "Andale Mono", monospace;
   text-align: center;
   margin: 5%;
   background-color: lightgrey;
@@ -15,5 +16,6 @@ body {
 
 #output {
   background-color: whitesmoke;
+  font-family: "Andale Mono", monospace;
   padding: 2%;
 }
