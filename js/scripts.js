@@ -1,4 +1,11 @@
 // Business Logic
+function outputMessage(value) {
+  let messageList = [];
+  for (let i = 0; i <= value; i++) {
+    messageList.push(i);
+  }
+  return messageList;
+}
 
 // UI Logic
 function userNumber(userInput) {
