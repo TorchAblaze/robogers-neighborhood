@@ -31,6 +31,10 @@ function outputMessage(value) {
 
 // UI Logic
 function userNumber(userInput) {
+  if (userInput === "") {
+    userInput = "Nothing";
+    return userInput;
+  }
   numberRange = parseInt(userInput);
   if (isNaN(numberRange)) {
     return userInput;
@@ -46,7 +50,7 @@ $(document).ready(function () {
   $("form#roboger").submit(function (event) {
     event.preventDefault();
     const userNum = userNumber($("#num-input").val());
-    const notNum = `Does Not compute! **[0_o]** My wires are cross... ${userNum} is not a number!`;
+    const notNum = `Does Not compute! **[0_o]** My wires are cross... "${userNum}" is not a number!`;
     const isNum = outputMessage(userNum);
     if (isNaN(userNum)) {
       $("#output").text(notNum);

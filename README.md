@@ -63,6 +63,10 @@ Test: "If a user's input is not a number, print an error message"
 Code: userNumber("Hello")
 Expected Output: "'Hello' is not a number"
 
+Test: "If a user doesn't type anything, the value should not be considered a number"
+Code: userNumber("");
+Expected Output: Nothing
+
 Describe: outputMessage()
 
 Test: "It should return a list of numbers in a number range"
