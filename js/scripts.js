@@ -38,6 +38,10 @@ function outputMessage(value, name) {
   return messageString;
 }
 
+function reverseMessage(message) {
+  return message.split("").reverse().join("");
+}
+
 // UI Logic
 function userNumber(userInput) {
   if (userInput === "") {
@@ -60,10 +64,18 @@ $(document).ready(function () {
     const userNum = userNumber($("#num-input").val());
     const userName = $("#user-name").val();
     const isNum = outputMessage(userNum, userName);
+    const reverse = $("input:radio[name=reverse]:checked").val();
     if (isNaN(userNum)) {
       $("#output").text(userNum);
+      $("#output").show();
     } else {
-      $("#output").text(isNum);
+      if (reverse === "true") {
+        console.log(isNum);
+        $("#output").text(reverseMessage(isNum));
+      } else {
+        $("#output").text(isNum);
+      }
+      $("#output").show();
     }
   });
 });

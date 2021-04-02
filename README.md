@@ -43,6 +43,8 @@ _Please reach out through my GitHub account._
 
 MIT License.
 
+Image License Courtesy of **Joe Greathead**
+
 Copyright (c) 2021 **_Tiffany Greathead_**
 
 Describe: userNumber()
@@ -104,3 +106,9 @@ Expected Output: "0, Beep! Boop! Won't you be my neighbor, Mr.Roboger? 4, 5"
 Test: "If name input is left blank, don't leave an empty space"
 Code: outputMessage(5, "");
 Expected Output: "0, Beep! Boop! Won't you be my neighbor, Mr.Roboger? 4, 5"
+
+Describe: reverseMessage()
+
+Test: "If the user selects the "reverse message" option, print the message in reverse"
+Code: reverseMessage("0, Beep! Boop! Won't you be my neighbor, Mr.Roboger? 4, 5")
+Expected Output: "55 ,4 ?T ,robhgien ym eb uoy t'noW !pooB !peeB ,0"

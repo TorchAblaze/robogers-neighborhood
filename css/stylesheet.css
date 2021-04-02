@@ -15,7 +15,8 @@ body {
 }
 
 #output {
-  background-color: whitesmoke;
+  display: none;
   font-family: "Andale Mono", monospace;
+  font-size: x-large;
   padding: 3%;
 }
