@@ -18,7 +18,9 @@ function outputMessage(value) {
   }
   let messageString = "";
   messageList.forEach(function (value, index) {
-    if (index === messageList.length - 1) {
+    if (typeof value === "string") {
+      messageString += `${value} `;
+    } else if (index === messageList.length - 1) {
       messageString += value;
     } else {
       messageString += `${value}, `;
@@ -48,6 +50,8 @@ $(document).ready(function () {
     const isNum = outputMessage(userNum);
     if (isNaN(userNum)) {
       $("#output").text(notNum);
+    } else {
+      $("#output").text(isNum);
     }
   });
 });

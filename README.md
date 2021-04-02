@@ -39,3 +39,7 @@ Describe: messageString()
 Test: "Return the list as a string"
 Code: messageString([0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5]);
 Expected Output: "0, Beep!, Boop!, Won't you be my neighbor?, 4, 5"
+
+Test: "If a value in the list contains an ! or ?, don't inlcude a ,"
+Code: messageString(5)
+Expected Output: "0, Beep! Boop! Won't you be my neighbor? 4, 5"
