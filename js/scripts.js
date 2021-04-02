@@ -1,13 +1,14 @@
 // Business Logic
 function outputMessage(value) {
+  let newIndex;
   let messageList = [];
-  if (value < 0) {
-    value *= -1;
-  }
   for (let i = 0; i <= value; i++) {
     let numString = i.toString();
     if (numString.includes(3)) {
-      let newIndex = "Won't you be my neighbor?";
+      newIndex = "Won't you be my neighbor?";
+      messageList.push(newIndex);
+    } else if (numString.includes(2)) {
+      newIndex = "Boop";
       messageList.push(newIndex);
     } else {
       messageList.push(i);
@@ -22,7 +23,10 @@ function userNumber(userInput) {
   if (Number.isNaN(numberRange)) {
     return userInput;
   } else {
-    return userNumber;
+    if (numberRange < 0) {
+      numberRange *= -1;
+    }
+    return numberRange;
   }
 }
 
