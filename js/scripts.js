@@ -1,13 +1,13 @@
 // Business Logic
-function outputMessage(value) {
+function outputMessage(value, name) {
   let messageList = [];
   if (value > 1000000) {
-    return `--[-_-]-- You broke me, ${value} is too high! Shutting dooown...`;
+    return `--[-_-]-- ${name}... You broke me, ${value} is too high! Shutting dooown...`;
   }
   for (let i = 0; i <= value; i++) {
     let numString = i.toString();
     if (numString.includes(3)) {
-      let newIndex = "Won't you be my neighbor?";
+      let newIndex = `Won't you be my neighbor, ${name}?`;
       messageList.push(newIndex);
     } else if (numString.includes(2)) {
       let newIndex = "Boop!";
@@ -53,8 +53,9 @@ $(document).ready(function () {
   $("form#roboger").submit(function (event) {
     event.preventDefault();
     const userNum = userNumber($("#num-input").val());
+    const userName = $("#user-name").val();
     const notNum = `Does Not compute! **[0_o]** My wires are cross... "${userNum}" is not a number!`;
-    const isNum = outputMessage(userNum);
+    const isNum = outputMessage(userNum, userName);
     if (isNaN(userNum)) {
       $("#output").text(notNum);
     } else {
