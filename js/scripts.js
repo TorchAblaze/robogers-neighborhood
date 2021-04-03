@@ -67,6 +67,7 @@ $(document).ready(function () {
     const reverse = $("input:radio[name=reverse]:checked").val();
     if (isNaN(userNum)) {
       $("#output").text(userNum);
+      $("#broken").hide();
       $("#no-compute").show();
       $("#output").show();
     } else {
