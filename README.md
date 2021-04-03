@@ -22,7 +22,7 @@ Open via Bash/GitBash:
 2. Navigate into the `robogers-neighborhood` directory, and open in Visual Studio Code or preferred text editor
 3. Open index.html in Chrome or preferred browser
 
-#### To see my live website go to {https://TorchAblaze.github.io/robogers-neighborhood!
+#### To see my live website go to https://TorchAblaze.github.io/robogers-neighborhood!
 
 ## Known Bugs
 
