@@ -67,14 +67,20 @@ $(document).ready(function () {
     const reverse = $("input:radio[name=reverse]:checked").val();
     if (isNaN(userNum)) {
       $("#output").text(userNum);
+      $("#no-compute").show();
       $("#output").show();
     } else {
       if (reverse === "true") {
         console.log(isNum);
         $("#output").text(reverseMessage(isNum));
+      } else if (userNum > 1000000) {
+        $("#broken").show();
+        $("#output").text(isNum);
       } else {
         $("#output").text(isNum);
+        $("#broken").hide();
       }
+      $("#no-compute").hide();
       $("#output").show();
     }
   });

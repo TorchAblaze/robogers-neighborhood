@@ -26,7 +26,7 @@ Open via Bash/GitBash:
 
 ## Known Bugs
 
-_No known bugs_
+- Fix Reverse Function
 
 ## Support and contact details
 
